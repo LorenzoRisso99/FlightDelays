@@ -5,9 +5,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.jgrapht.Graph;
 import org.jgrapht.Graphs;
+import org.jgrapht.alg.connectivity.ConnectivityInspector;
 import org.jgrapht.graph.DefaultWeightedEdge;
 
 import org.jgrapht.graph.SimpleWeightedGraph;
@@ -67,13 +69,17 @@ public class Model {
 		System.out.println("Vertici : " + this.grafo.vertexSet().size() + "\n");
 		System.out.println("Archi : " + this.grafo.edgeSet().size());
 		
+		
+//		ConnectivityInspector<Airport, DefaultWeightedEdge> ci = new ConnectivityInspector<>(grafo);
+//		Set<Airport> result = ci.connectedSetOf(c);
+		
 	}
 	
 	// PUNTO C
 	
 	public List<Airport> getVertici() {                      //Per aggiungere a elenco a tendine 
 		List<Airport> vertici = new ArrayList<Airport>(this.grafo.vertexSet());
-		Collections.sort(vertici);          // Sort perche in airport ho comparable per ordonarli per iniziale
+		Collections.sort(vertici);          // Sort perche in airport ho comparable per ordinarli per iniziale
 		return vertici;
 		
 	}

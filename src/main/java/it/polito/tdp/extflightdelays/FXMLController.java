@@ -48,6 +48,9 @@ public class FXMLController {
     	
     	int x;
     	
+    	Airport a = cmbBoxAeroportoDestinazione.getValue();
+    	//getcomponenteConnessa (a)
+    	
     	try {
     		
     		x = Integer.parseInt(compagnieMinimo.getText());
